@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Vashudev Bird Control{% endblock %}
+{% block link %}
+<!-- <link rel="stylesheet" href="{% static 'css/base.css' %}">  -->
+<link rel="stylesheet" href="{% static 'css/contact.css' %}"> 
+{% endblock %}
+
+{% block pagesection %}Contact {% endblock %}
+{% block headpage %}> Contact  {% endblock %}
+
+{% block content %}
+
+<!-- contact content start  -->
+
+<section class="contact-contents-info">
+    <div class="container mt-5">
+        
+        <div class="row bg-light pt-5 p-5">
+        <div class="col-lg-6">
+            <div class="contact-quote" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="">Get A Quote</span>           
+                <h2>Restoring your peace of <br>
+                    the mind
+                    </h2>
+            </div>
+                   
+        <form action="" method="POST" class="contact-form" >
+            {% csrf_token %}
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+            </div>
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="9999999999" required>
+            </div>
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <label for="textarea" class="form-label">Comment</label>
+                <textarea class="form-control" name="comment" id="textarea" rows="3" placeholder="Enter something" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Submit</button>
+        </form>
+        
+            
+        </div>
+        <div class="col-lg-6 contact-right-info">
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="contact-icon">
+                    <a href="tel:+919795744433">📞</a></span>
+                <div class="contact-content" >
+                    <div class="contact-title">Call Us</div>
+                    <div>
+                        <ul class="contact-number">
+                            <li><a href="tel:+918076246674" class="text-black me-2">+91-8076246674 |</a></li>
+                            <li><a href="tel:+919648226699" class="text-black">+91-9648226699  |</a></li>
+                            <li><a href="tel:+919795744433" class="text-black me-2">+91-9795744433 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="contact-icon">
+                    <a href="mailto:vashudevbirdcontrol@gmail.com">✉️</a></span>
+                <div class="contact-content">
+                    <div class="contact-title">Email</div>
+                    <div>
+                        <a href="mailto:vashudevbirdcontrol@gmail.com" class="text-black me-2">vashudevbirdcontrol@gmail.com</a>
+                        </div>
+                </div>
+            </div>
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div class="contact-content">
+                    <div class="contact-title">Location</div>
+                    <div>
+                        <strong>Main Office:</strong> T-197-C Savitri Nagar, Opposite Andolen Park, Near Chhabbra Battery Wali Gali, PO-Malviya Nagar, New Delhi-17
+                        <br>
+                        <strong>Head Office:</strong> Ramdaspur Newada Shitla Chaukiyan 222001 Jaunpur UP
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+ <!-- container end  -->
+{% endblock %}

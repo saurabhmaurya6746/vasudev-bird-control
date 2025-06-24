@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bird Spike System - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/bird-netting-service.css' %}">
+{% endblock %}
+
+{% block pagesection %} Bird Spike System {% endblock %}
+{% block headpage %}>  Bird Spike System  {% endblock %}
+
+{% block content %}
+
+<!-- main part of bird-netting-services -->
+
+<section class="bird-netting-services">
+    <div class="container">
+    <div class="row bird-netting-row">
+        <div class="col-lg-4">
+            <div class="different-section-link">
+            <ul>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-netting-services' %}">BIRD NETTING SERVICES</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-spike-system' %}">BIRD SPIKE SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'sport-net' %}">SPORT NET</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'swimming-pool-protect-net-system' %}">SWIMMING POOL PROTECT NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'car-parking-net-system' %}">CAR PARKING NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'safety-nets' %}">SAFETY NETS</a></li>
+            </ul>
+            </div>
+            <div class="contact-container mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/about-image-1-681x1024.jpg' %}" alt="Bird Image" class="background-image">
+                <div class="overlay" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <p>Have any Question?<br>Contact Us Now</p>
+                    <h2>Call</h2>
+                    <h1><a href="tel:8076246674" class="text-white">8076246674</a></h1>
+                    <p><a href="mailto:vashudevbirdcontrol@gmail.com" class="text-white">vashudevbirdcontrol@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="bird-contact-form mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'contact' %}" class="me-1"><b>Contact Us</b> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+    </div>
+    
+        <div class="col-lg-7 ps-4">
+            <div class="bird-netting-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/s2.png' %}" alt="">
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Bird Spike System</h2>
+                <p class="my-3">Welcome to our bird spike system installation service, where we offer effective avian pest control solutions while minimizing the impact on birds and the environment. Our bird spike systems provide a humane and non-lethal method of deterring birds from landing and roosting on buildings and structures, helping to protect your property without causing harm to wildlife.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Bird Spike System Features and Benefits</h2>
+                <p class="my-3"><b>Durable Construction: </b>Our bird spike systems are made from high-quality materials such as stainless steel or UV-resistant polycarbonate, ensuring durability and longevity even in harsh outdoor environments.
+                </p>
+                <p><b>Versatile Application:  </b>Whether you need to protect residential homes, commercial buildings, or industrial facilities, our bird spike systems can be installed on a variety of surfaces, including ledges, rooftops, signs, and more.
+                </p>
+                <p><b>Humane Bird Deterrence: </b>Unlike harmful methods such as trapping or poisoning, bird spike systems provide a humane and non-lethal way to deter birds from landing and nesting on your property, ensuring their safety while addressing nuisance bird issues.
+                </p>
+                <p><b>Low Maintenance:  </b>  Once installed, our bird spike systems require minimal maintenance, providing long-term bird control without the need for frequent adjustments or replacements.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">How It Works</h2>
+                <p class=""><b>Consultation and Site Assessment: </b>We begin by conducting a thorough assessment of your property to identify areas where birds are landing or roosting. Our team will work closely with you to understand your specific bird control needs and objectives.</p>
+
+                <p><b>Customized Solution Design:  </b>Based on our assessment, we develop a customized bird spike system installation plan tailored to your property's unique requirements. We consider factors such as the type of birds present, the surface to be protected, and any aesthetic considerations.</p>
+
+                <p><b>Professional Installation : </b>Our experienced technicians handle the installation process with precision and care, ensuring that the bird spike system is securely and evenly mounted to provide effective bird deterrence. We take care to minimize any visual impact on your property.
+                </p>
+                <p><b>Ongoing Support : </b>We provide comprehensive support after installation, including inspections and maintenance services to ensure that your bird spike system remains effective over time. Our team is always available to address any questions or concerns you may have.
+                </p>
+                <p>Protect your property from nuisance birds with our efficient bird spike system installation service. Our humane and non-lethal approach to bird control ensures effective avian pest management while minimizing impact on birds and the environment. Contact us today to learn more about how our bird spike systems can help you safeguard your property.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}

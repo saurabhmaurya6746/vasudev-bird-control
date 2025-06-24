@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bird - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block pagesection %}Tag: Bird {% endblock %}
+{% block headpage %}> Blog > Bird  {% endblock %}
+
+{% block content %}
+
+<!-- main image start  -->
+<div class="container">
+     
+    <div class="blog-main-contents mb-5">
+        <div class="blog-images">
+            <img src="{% static 'image/s1.png' %}" class="" alt="">
+        </div>
+        <div class="blog-content">
+            <div class="process-icons d-flex mb-3">
+                <div class="blog-user">
+                    <i class="fa-solid fa-user"></i> 
+                    <span class="">Vasudev</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="">May 31, 2024</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-comment"></i> 
+                    <span class="">No Comments</span>
+                </div>
+            </div>
+        
+        <div class="blog-content-discripation">
+            <a href="{% url 'exploring-the-essential' %}" class="text-dark">Exploring the Essential Role of Bird Netting 
+                Services in Effective Bird Damage Management</a>
+            <p>Birds, with their grace and songs, are undoubtedly a charming part of our natural environment. However, when their presence disrupts our daily lives, particularly in urban settings, it can pose significant challenges. Bird droppings, nest debris, and the potential health hazards associated with them are just a few issues that property owners face. This is […]</p>
+
+            <div class="read-more-btn" >
+                <a href="{% url 'exploring-the-essential' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+              </div>
+        </div>
+    </div>
+        </div>
+        <div class="blog-main-contents mb-5">
+        <div class="blog-images">
+            <img src="{% static 'image/s2.png' %}" class="" alt="">
+        </div>
+        <div class="blog-content">
+            <div class="process-icons d-flex mb-3">
+                <div class="blog-user">
+                    <i class="fa-solid fa-user"></i> 
+                    <span class="">Vasudev</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="">May 30, 2024</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-comment"></i> 
+                    <span class="">No Comments</span>
+                </div>
+            </div>
+        
+        <div class="blog-content-discripation">
+            <a href="{% url 'Keeping-Pigeons' %}" class="text-dark">Keeping Pigeons at Bay: The Best Bird Spikes for Effective Pest Control</a>
+            <p>Pigeons are beautiful creatures to admire from afar, but when they start invading our homes, offices, or public spaces, they can quickly become a nuisance. Their droppings can deface buildings, their cooing can disrupt peace, and their nesting habits can cause structural damage. If you’re facing a pigeon problem, one effective solution is bird spikes. […]</p>
+
+            <div class="read-more-btn" >
+                <a href="{% url 'Keeping-Pigeons' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+              </div>
+        </div>
+    </div>
+        </div>
+        <div class="blog-main-contents mb-5">
+        <div class="blog-images">
+            <img src="{% static 'image/n-banner1.png' %}" class="w-100" alt="">
+        </div>
+        <div class="blog-content">
+            <div class="process-icons d-flex mb-3">
+                <div class="blog-user">
+                    <i class="fa-solid fa-user"></i> 
+                    <span class="">Vasudev</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="">March 14, 2024</span>
+                </div>
+                <div class="blog-user">
+                    <i class="fa-solid fa-comment"></i> 
+                    <span class="">No Comments</span>
+                </div>
+            </div>
+        
+        <div class="blog-content-discripation">
+            <a href="{% url 'pleated-pigeon' %}" class="text-dark">Pleated Pigeon Net</a>
+            <p>Embark on a global exploration of logistics considerations for international shipping. Delve into customs, regulations, and the intricate web of challenges, and discover the art of selecting reliable international logistics partners. Realize success in the vast landscape of global logistics operations. Tosser argy-bargy mush loo at public school Elizabeth up the duff buggered chinwag on […]</p>
+
+            <div class="read-more-btn" >
+                <a href="{% url 'pleated-pigeon' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+              </div>
+        </div>
+    </div>
+        </div>
+</div>
+
+{% endblock %}

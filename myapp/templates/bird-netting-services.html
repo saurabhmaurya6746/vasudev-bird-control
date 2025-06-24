@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bird Netting Service - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/bird-netting-service.css' %}">
+{% endblock %}
+
+{% block pagesection %}Bird Netting Service {% endblock %}
+{% block headpage %}> Bird Netting Service  {% endblock %}
+
+{% block content %}
+
+<!-- main part of bird-netting-services -->
+
+<section class="bird-netting-services">
+    <div class="container">
+    <div class="row bird-netting-row">
+        <div class="col-lg-4">
+            <div class="different-section-link" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <ul>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-netting-services' %}">BIRD NETTING SERVICES</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-spike-system' %}">BIRD SPIKE SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'sport-net' %}">SPORT NET</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'swimming-pool-protect-net-system' %}">SWIMMING POOL PROTECT NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'car-parking-net-system' %}">CAR PARKING NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'safety-nets' %}">SAFETY NETS</a></li>
+            </ul>
+            </div>
+            <div class="contact-container mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/about-image-1-681x1024.jpg' %}" alt="Bird Image" class="background-image">
+                <div class="overlay" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <p>Have any Question?<br>Contact Us Now</p>
+                    <h2>Call</h2>
+                    <h1><a href="tel:8076246674" class="text-white">8076246674</a></h1>
+                    <p><a href="mailto:vashudevbirdcontrol@gmail.com" class="text-white">vashudevbirdcontrol@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="bird-contact-form mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'contact' %}" class="me-1"><b>Contact Us</b> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+    </div>
+    
+        <div class="col-lg-7 ps-4">
+            <div class="bird-netting-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/s1.png' %}" alt="">
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Bird Netting</h2>
+                <p class="my-3">Welcome to our comprehensive bird netting services, designed to safeguard your property from avian pests while carefully considering the balance between effectiveness, aesthetics, and environmental impact. Whether you're dealing with nuisance birds in agricultural fields, commercial buildings, or residential properties, our expert team is here to provide tailored solutions that meet your needs.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Bird Netting Features and Benefits</h2>
+                <p class="my-3"><b>Customized Solutions : </b>Welcome to our comprehensive bird netting services, designed to safeguard your property from avian pests while carefully considering the balance between effectiveness, aesthetics, and environmental impact. Whether you're dealing with nuisance birds in agricultural fields, commercial buildings, or residential properties, our expert team is here to provide tailored solutions that meet your needs.</p>
+                <p><b>Effective Bird Deterrence : </b> Our bird netting solutions effectively deter a wide range of bird species, including pigeons, seagulls, sparrows, and more. By creating a physical barrier, we prevent birds from accessing areas where they can cause damage or pose health risks.</p>
+                <p><b>Aesthetic Considerations : </b> We recognize the importance of maintaining the visual appeal of your property. That's why our bird netting solutions are designed to blend seamlessly with the architecture and surroundings, minimizing visual impact while providing maximum protection.</p>
+                <p><b>Environmentally Friendly : </b> While bird control is essential, we also prioritize environmental responsibility. Our bird netting solutions are designed to minimize harm to birds, ensuring they remain safe while preventing access to protected areas.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">How It Works</h2>
+                <p class=""><b>Consultation and Site Assessment: </b>We begin with a thorough consultation to understand your bird control needs and assess the site for potential bird entry points and nesting areas.</p>
+                <p><b>Custom Design and Planning: </b>Based on our assessment, we develop a customized bird netting solution that addresses your specific requirements, taking into account factors such as property size, bird species present, and aesthetic considerations.</p>
+                <p><b>Professional Installation : </b> Our experienced technicians handle the installation process with precision and efficiency, ensuring the bird netting is securely installed and properly tensioned to provide reliable protection.
+                </p>
+                <p><b>Ongoing Maintenance and Support : </b> We offer ongoing maintenance services to keep your bird netting in optimal condition, including inspections, repairs, and adjustments as needed to maintain effectiveness over time.</p>
+                <p>Don't let nuisance birds wreak havoc on your property. Our bird netting services offer a comprehensive solution that balances effectiveness, aesthetics, and environmental impact. With customized solutions tailored to your needs and expert installation by our experienced team, you can enjoy peace of mind knowing your property is protected from avian pests. Contact us today to learn more and schedule a consultation.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}

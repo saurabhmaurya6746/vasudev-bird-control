@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blogs - Vashudev Bird Control {% endblock %}
+{% block link %}
+<!-- <link rel="stylesheet" href="{% static 'css/base.css' %}">  -->
+<link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
+{% endblock %}
+
+
+{% block pagesection %}Blog {% endblock %}
+{% block headpage %}> Blog {% endblock %}
+
+{% block content %}
+
+
+<section class="blog-contents pt-5 mb-5">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            {% block blogcontent %}
+            <div class="blog-main-contents mb-5">
+            <div class="blog-images"data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+               <!-- <img src="{% static 'image/s1.png' %}" class="" alt="">-->
+                <img src="{% static 'image/spike.jpg' %}" class="" alt="">
+            </div>
+            <div class="blog-content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="process-icons d-flex mb-3">
+                    <div class="blog-user" >
+                        <i class="fa-solid fa-user"></i> 
+                        <span class="">Vasudev</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="">May 31, 2024</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-comment"></i> 
+                        <span class="">No Comments</span>
+                    </div>
+                </div>
+            
+            <div class="blog-content-discripation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'exploring-the-essential' %}" class="text-dark">Exploring the Essential Role of Bird Netting 
+                    Services in Effective Bird Damage Management</a>
+                <p>Birds, with their grace and songs, are undoubtedly a charming part of our natural environment. However, when their presence disrupts our daily lives, particularly in urban settings, it can pose significant challenges. Bird droppings, nest debris, and the potential health hazards associated with them are just a few issues that property owners face. This is […]</p>
+
+                <div class="read-more-btn" >
+                    <a href="{% url 'exploring-the-essential' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+                  </div>
+            </div>
+        </div>
+            </div>
+            <div class="blog-main-contents mb-5">
+            <div class="blog-images" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/s2.png' %}" class="" alt="">
+            </div>
+            <div class="blog-content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="process-icons d-flex mb-3">
+                    <div class="blog-user">
+                        <i class="fa-solid fa-user"></i> 
+                        <span class="">Vasudev</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="">May 30, 2024</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-comment"></i> 
+                        <span class="">No Comments</span>
+                    </div>
+                </div>
+            
+            <div class="blog-content-discripation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'Keeping-Pigeons' %}" class="text-dark">Keeping Pigeons at Bay: The Best Bird Spikes for Effective Pest Control</a>
+                <p>Pigeons are beautiful creatures to admire from afar, but when they start invading our homes, offices, or public spaces, they can quickly become a nuisance. Their droppings can deface buildings, their cooing can disrupt peace, and their nesting habits can cause structural damage. If you’re facing a pigeon problem, one effective solution is bird spikes. […]</p>
+
+                <div class="read-more-btn" >
+                    <a href="{% url 'Keeping-Pigeons' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+                  </div>
+            </div>
+        </div>
+            </div>
+            <div class="blog-main-contents mb-5">
+            <div class="blog-images" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/n-banner1.png' %}" class="w-100" alt="">
+            </div>
+            <div class="blog-content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="process-icons d-flex mb-3">
+                    <div class="blog-user">
+                        <i class="fa-solid fa-user"></i> 
+                        <span class="">Vasudev</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="">March 14, 2024</span>
+                    </div>
+                    <div class="blog-user">
+                        <i class="fa-solid fa-comment"></i> 
+                        <span class="">No Comments</span>
+                    </div>
+                </div>
+            
+            <div class="blog-content-discripation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'pleated-pigeon' %}" class="text-dark">Pleated Pigeon Net</a>
+                <p>Embark on a global exploration of logistics considerations for international shipping. Delve into customs, regulations, and the intricate web of challenges, and discover the art of selecting reliable international logistics partners. Realize success in the vast landscape of global logistics operations. Tosser argy-bargy mush loo at public school Elizabeth up the duff buggered chinwag on […]</p>
+
+                <div class="read-more-btn" >
+                    <a href="{% url 'pleated-pigeon' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+                  </div>
+            </div>
+        </div>
+            </div>
+            {% endblock %}
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-card mt-5">
+                <div class="blog-card-body" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        <li><a href="{% url 'exploring-the-essential' %}">Exploring the Essential Role of Bird Netting Services in Effective Bird Damage Management</a></li>
+                        <li><a href="{% url 'Keeping-Pigeons' %}">Keeping Pigeons at Bay: The Best Bird Spikes for Effective Pest Control</a></li>
+                        <li><a href="{% url 'pleated-pigeon' %}">Pleated Pigeon Net</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="blog-card mt-5">
+                <div class="blog-card-body" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h4>Recent Comment </h4>
+                     <span>No comment to shown</span>
+
+                </div>
+            </div>
+            <div class="blog-card mt-5">
+                <div class="blog-card-body" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h4>Recent Post </h4>
+                     
+                    <div class="blog-card-image-secion bg-light mb-3 d-flex">
+                        <div class="blog-card-image ">
+                            <a href="{% url 'exploring-the-essential' %}"><img src="{% static 'image/s1.png' %}" alt=""></a>
+                        </div>
+                        <div class="blog-card-image-title p-2">
+                            <a href="{% url 'exploring-the-essential' %}">Exploring the Essential Role of</a> <br>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="">May 31, 2024</span>
+                        </div>
+                    </div>
+                    <div class="blog-card-image-secion bg-light mb-3 d-flex">
+                        <div class="blog-card-image ">
+                            <a href="{% url 'Keeping-Pigeons' %}"><img src="{% static 'image/s2.png' %}" alt=""></a>
+                        </div>
+                        <div class="blog-card-image-title p-2">
+                            <a href="{% url 'Keeping-Pigeons' %}">Keeping Pigeons at Bay: The</a> <br>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="">May 30, 2024</span>
+                        </div>
+                    </div>
+                    <div class="blog-card-image-secion bg-light mb-3 d-flex">
+                        <div class="blog-card-image ">
+                            <a href="{% url 'pleated-pigeon' %}"><img src="{% static 'image/s4.png' %}" alt=""></a>
+                        </div>
+                        <div class="blog-card-image-title bg-light p-2">
+                            <a href="{% url 'pleated-pigeon' %}">Pleated Pigeon Net</a> <br>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="">March 14, 2024</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="blog-card mt-5">
+                <div class="blog-card-body" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h4>Categories </h4>
+                     <ul>
+                        <li class="d-flex cat-items">
+                            <i class="fa-solid fa-greater-than"></i>
+                            <a href="" class="text-black">Bird Spikes</a>
+                        </li>
+                     </ul>
+
+                </div>
+            </div>
+            <div class="blog-card mt-5">
+                <div class="blog-card-body tag-items" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h4>Tags</h4>
+                   <a href="{% url 'bird' %}">Bird</a> 
+                   <a href="{% url 'spikes' %}">Spikes</a> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+{% endblock %}

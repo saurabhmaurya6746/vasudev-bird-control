@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Spikes - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block pagesection %}Tag: Spikes {% endblock %}
+{% block headpage %}> Blog > Spikes  {% endblock %}
+
+{% block content %}
+
+<!-- main image start  -->
+<div class="container">
+     
+<div class="blog-main-contents mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+    <div class="blog-images">
+        <img src="{% static 'image/s2.png' %}" class="" alt="">
+    </div>
+    <div class="blog-content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <div class="process-icons d-flex mb-3">
+            <div class="blog-user">
+                <i class="fa-solid fa-user"></i> 
+                <span class="">Vasudev</span>
+            </div>
+            <div class="blog-user">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span class="">May 30, 2024</span>
+            </div>
+            <div class="blog-user">
+                <i class="fa-solid fa-comment"></i> 
+                <span class="">No Comments</span>
+            </div>
+        </div>
+    
+    <div class="blog-content-discripation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <a href="{% url 'Keeping-Pigeons' %}" class="text-dark">Keeping Pigeons at Bay: The Best Bird Spikes for Effective Pest Control</a>
+        <p>Pigeons are beautiful creatures to admire from afar, but when they start invading our homes, offices, or public spaces, they can quickly become a nuisance. Their droppings can deface buildings, their cooing can disrupt peace, and their nesting habits can cause structural damage. If you’re facing a pigeon problem, one effective solution is bird spikes. […]</p>
+
+        <div class="read-more-btn" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <a href="{% url 'Keeping-Pigeons' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+          </div>
+    </div>
+</div>
+    </div>
+</div>
+
+{% endblock %}

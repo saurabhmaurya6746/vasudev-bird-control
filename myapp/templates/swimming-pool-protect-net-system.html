@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Swimming Pool Protect Net System - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/bird-netting-service.css' %}">
+{% endblock %}
+
+{% block pagesection %}Swimming Pool Protect Net System{% endblock %}
+{% block headpage %}> Swimming Pool Protect Net System{% endblock %}
+
+{% block content %}
+
+<!-- main part of bird-netting-services -->
+
+<section class="bird-netting-services">
+    <div class="container">
+    <div class="row bird-netting-row">
+        <div class="col-lg-4">
+            <div class="different-section-link">
+            <ul>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-netting-services' %}">BIRD NETTING SERVICES</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-spike-system' %}">BIRD SPIKE SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'sport-net' %}">SPORT NET</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'swimming-pool-protect-net-system' %}">SWIMMING POOL PROTECT NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'car-parking-net-system' %}">CAR PARKING NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'safety-nets' %}">SAFETY NETS</a></li>
+            
+            </ul>
+            </div>
+            <div class="contact-container mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/about-image-1-681x1024.jpg' %}" alt="Bird Image" class="background-image">
+                <div class="overlay" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <p>Have any Question?<br>Contact Us Now</p>
+                    <h2>Call</h2>
+                    <h1><a href="tel:8076246674" class="text-white">8076246674</a></h1>
+                    <p><a href="mailto:vashudevbirdcontrol@gmail.com" class="text-white">vashudevbirdcontrol@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="bird-contact-form mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'contact' %}" class="me-1"><b>Contact Us</b> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+    </div>
+    
+        <div class="col-lg-7 ps-4">
+            <div class="bird-netting-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/s5.png' %}" alt="">
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Swimming Pool Protect Net System</h2>
+                <p class="my-3">Welcome to our swimming pool protection net system installation service, where we prioritize safety and enjoyment by offering high-quality netting solutions designed to safeguard your pool area. Our goal is to strike a balance between security and aesthetics, providing you with peace of mind while enhancing the beauty of your outdoor space.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Swimming Pool Net System Features and Benefits</h2>
+                <p class="my-3"><b>Child and Pet Safety:</b> Our swimming pool protection net systems act as a barrier to prevent children and pets from accidentally falling into the pool, reducing the risk of drowning and other water-related accidents.
+                </p>
+                <p><b> Durable Materials:</b> Constructed from strong and durable materials such as nylon or polyethylene, our pool nets are designed to withstand harsh outdoor conditions and provide long-lasting protection.
+                </p>
+                <p><b>Custom Fit: </b> We offer customized sizing and installation to ensure that the pool net fits your specific pool dimensions and layout perfectly, providing comprehensive coverage and maximum safety.
+                </p>
+                <p><b>Aesthetic Appeal: </b> Our pool net systems are designed to blend seamlessly with your outdoor decor, enhancing the visual appeal of your pool area without compromising safety.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">How It Works</h2>
+                <p class=""><b>Consultation and Site Assessment: </b>We begin by conducting a thorough consultation to understand your pool protection needs and assess the layout of your pool area. Our team will work closely with you to determine the most suitable netting solution for your requirements.</p>
+                <p><b>Custom Design and Fabrication:</b> Based on our assessment, we develop a customized design for your pool protection net system, taking into account factors such as pool size, shape, and surrounding landscape. We ensure that the net is securely anchored and properly tensioned for optimal performance.</p>
+                <p><b>Professional Installation : </b>Our experienced technicians handle the installation process with precision and care, ensuring that the pool net is securely mounted and meets all safety standards. We take care to minimize any visual impact on your pool area, preserving its aesthetic appeal.
+                </p>
+                <p><b>Ongoing Maintenance and Support : </b>We provide ongoing maintenance services to keep your pool protection net system in top condition, including inspections, repairs, and adjustments as needed to ensure continued effectiveness over time.
+
+                </p>
+                <p>Protect your loved ones and enhance the beauty of your outdoor space with our swimming pool protection net system installation service. Our customized solutions offer the perfect balance of security and aesthetics, ensuring safety and enjoyment for your family and pets. Contact us today to learn more about how we can help you create a safer pool environment.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}

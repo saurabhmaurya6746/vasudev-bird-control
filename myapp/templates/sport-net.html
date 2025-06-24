@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sport Net - Vashudev Bird Control{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/bird-netting-service.css' %}">
+{% endblock %}
+
+{% block pagesection %} Sport Net {% endblock %}
+{% block headpage %}> Sport Net {% endblock %}
+
+{% block content %}
+
+<!-- main part of bird-netting-services -->
+
+<section class="bird-netting-services">
+    <div class="container">
+    <div class="row bird-netting-row">
+        <div class="col-lg-4">
+            <div class="different-section-link">
+            <ul>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-netting-services' %}">BIRD NETTING SERVICES</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'bird-spike-system' %}">BIRD SPIKE SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'sport-net' %}">SPORT NET</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'swimming-pool-protect-net-system' %}">SWIMMING POOL PROTECT NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'car-parking-net-system' %}">CAR PARKING NET SYSTEM</a></li>
+                <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="{% url 'safety-nets' %}">SAFETY NETS</a></li>
+            
+            </ul>
+            </div>
+            <div class="contact-container mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/about-image-1-681x1024.jpg' %}" alt="Bird Image" class="background-image">
+                <div class="overlay" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <p>Have any Question?<br>Contact Us Now</p>
+                    <h2>Call</h2>
+                    <h1><a href="tel:8076246674" class="text-white">8076246674</a></h1>
+                    <p><a href="mailto:vashudevbirdcontrol@gmail.com" class="text-white">vashudevbirdcontrol@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="bird-contact-form mb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <a href="{% url 'contact' %}" class="me-1"><b>Contact Us</b> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+    </div>
+    
+        <div class="col-lg-7 ps-4">
+            <div class="bird-netting-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <img src="{% static 'image/s4.png' %}" alt="">
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Sport Net</h2>
+                <p class="my-3">Welcome to our sport net installation service, where we provide high-quality netting solutions to enhance your sporting experience while carefully considering the balance between performance and environmental impact. Whether you're setting up a backyard sports court, a golf driving range, or a soccer field, our expert team is here to deliver tailored solutions that meet your needs.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">Sport Net Features and Benefits</h2>
+                <p class="my-3"><b>Durable Construction: </b> Our sport nets are made from premium materials such as nylon or polyester, ensuring durability and longevity even under heavy use and outdoor conditions.
+                </p>
+                <p><b>Customized Sizing and Design: </b> We offer customizable sizing and design options to fit your specific sporting requirements, whether you need a barrier net for golf balls, soccer goals, or tennis courts.
+                </p>
+                <p><b>Enhanced Safety: </b>Our sport nets provide a protective barrier to contain balls and equipment within the designated playing area, reducing the risk of injury to players and spectators.
+                </p>
+                <p><b>Environmental Considerations: </b> We prioritize sustainability in our netting materials and installation practices, ensuring minimal environmental impact while providing effective sports infrastructure.</p>
+            </div>
+            <div class="bird-netting-heading" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="my-4">How It Works</h2>
+                <p class=""><b>Consultation and Site Assessment: </b>We begin with a consultation to understand your sporting needs and assess the site for installation. Our team will work closely with you to determine the appropriate size, design, and placement of the sport net.</p>
+                <p><b>Custom Design and Fabrication:</b>Based on our assessment, we develop a customized design for your sport net, taking into account factors such as the type of sport, playing area dimensions, and any specific requirements you may have.</p>
+                <p><b>Professional Installation : </b> Our experienced technicians handle the installation process with precision and expertise, ensuring that the sport net is securely anchored and properly tensioned for optimal performance and safety.
+                </p>
+                <p><b>Maintenance and Support : </b> We provide ongoing maintenance services to keep your sport net in top condition, including inspections, repairs, and adjustments as needed to ensure continued effectiveness over time.
+
+                </p>
+                <p>Elevate your sporting experience with our high-quality sport net installation service. From backyard sports courts to professional athletic facilities, our customizable solutions are designed to enhance performance and safety while minimizing environmental impact. Contact us today to learn more about how we can help you create the perfect sporting environment.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}

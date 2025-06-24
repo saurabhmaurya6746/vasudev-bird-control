@@ -1,0 +1,886 @@
+{% load static %} 
+ 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Vashudev Bird Control</title>
+    <link rel="shortcut icon" href="{% static 'image/favicon.jpg' %}" type="image/x-icon">
+    <!-- aos animation link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  </head>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <body>
+
+    <!-- header start  -->
+<div class="container-fluid">
+   <!-- Email Section -->
+   <div class="row p-3 bg-dark" id="email-section">
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="col-lg-4 col-md-5 col-sm-6 col-12 text-center">
+      <a class="text-light" href="mailto:vashudevbirdcontrol@gmail.com">
+        <i class="fa-sharp fa-solid fa-envelope"></i> vashudevbirdcontrol@gmail.com
+      </a>
+    </div>
+    <div class="col-lg-4 col-md-2 col-sm-1 "></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 top-icons ">
+      <ul class="d-flex justify-content-between ">
+        <li><a class="text-light" href="https://www.facebook.com/share/16ZmhDw9mJ/"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a class="text-light" href="https://www.instagram.com/vashudevbird?utm_source=qr&igsh=aXY3NG0xdDVsdjcy"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a class="text-light" href="https://wa.me/918076246674"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a class="text-light" href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-lg-1 col-md-1 vanish"></div>
+  </div>
+  <div class="container mt-3">
+   <!-- Ensures spacing below header -->
+    <div class="row">
+        <div class="col-12">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible custom-alert" role="alert">
+                        <strong>Thank You!</strong> {{ message }} 
+                        <!-- <button type="button" class="btn-close ms-3" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+  <!-- Navbar Section -->
+  <div class="row navbar-row d-flex bg-white" id="navbar-row">
+    <div class="col-lg-2 col-md-6 col-sm-9 col-9 d-start pt-2 order-md-1  order-lg-1 navbar-logo ">
+     <a class="navbar-brand" href="{% url 'index' %}">
+       <img src="{% static 'image/f-logo.png' %}" alt="">
+     </a>
+    </div>
+     <div class="col-lg-7 col-md-1 col-sm-2 col-2 d-end navbar-top pt-2 order-md-3 order-lg-2 ">
+           <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
+         <!-- ☰ Menu Button (Hidden in LG) -->
+          
+         <button class="btn btn-outline-dark d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+             ☰
+         </button>
+ 
+         <!-- Main Navbar (Visible in LG and above) -->
+         <div class="d-none d-lg-block w-100">
+             <div class="row align-items-center">                  
+                 <!-- Navbar Links -->
+                 <div class="col-lg-12">
+                     <ul class="nav justify-content-center">
+                         <li class="nav-item "><a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'index' %}">Home</a></li>
+                         <li class="nav-item"><a class="nav-link {% if request.path == '/about' %} active {% endif %}" href="{% url 'about' %}">About</a></li>
+                         <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                             <ul class="dropdown-menu">
+                                 <li class=""><a class="dropdown-item {% if request.path == '/bird-netting-services/' %} active {% endif %}" href="{% url 'bird-netting-services' %}">Bird Netting Services</a></li>
+                                 <li><a class="dropdown-item {% if request.path == '/bird-spike-system/' %} active {% endif %}" href="{% url 'bird-spike-system' %}">Bird Spike System</a></li>
+                                 <li><a class="dropdown-item {% if request.path == '/sport-net/' %} active {% endif %}" href="{% url 'sport-net' %}">Sport Net</a></li>
+                                 <li><a class="dropdown-item {% if request.path == '/car-parking-net-system/' %} active {% endif %}" href="{% url 'car-parking-net-system' %}">Car Parking Net System</a></li>
+                                 <li><a class="dropdown-item {% if request.path == '/swimming-pool-protect-net-system/' %} active {% endif %}" href="{% url 'swimming-pool-protect-net-system' %}">Swimming Pool Protect Net System</a></li>
+                                 <li><a class="dropdown-item {% if request.path == '/safety-nets/' %} active {% endif %}" href="{% url 'safety-nets' %}">Safety Nets</a></li>
+                             </ul>
+                         </li>
+                         <li class="nav-item"><a class="nav-link {% if request.path == '/gallery/' %} active {% endif %}" href="{% url 'gallery' %}">Gallery</a></li>
+                         <li class="nav-item"><a class="nav-link {% if request.path == '/blog/' %} active {% endif %}" href="{% url 'blog' %}">Blog</a></li>
+                         <li class="nav-item"><a class="nav-link {% if request.path == '/contact/' %} active {% endif %}" href="{% url 'contact' %}">Contact</a></li>
+                     </ul>
+                 </div>
+                 <!-- Contact Info -->
+                 
+             </div>
+         </div>
+   </nav>
+   </div>
+     <!-- Offcanvas Sidebar (For Mobile & Tablet) -->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+         <div class="offcanvas-header">
+             <h5 class="offcanvas-title"> 
+                 <img src="{% static 'image/f-logo.png' %}" alt="Logo" style="height: 40px;">
+             </h5>
+             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+         </div>
+         <div class="offcanvas-body">
+             <ul class="list-unstyled">
+              <li class="nav-item"><a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'index' %}">Home </a></li>
+              <li class="nav-item"><a class="nav-link {% if request.path == '/about/' %} active {% endif %}" href="{% url 'about' %}">About</a></li>
+                 <li class="nav-item">
+                     <a href="" class="nav-link" onclick="toggleDropdown(event)">
+                         Services 
+                         <button class="btn btn-sm btn-primary">+</button>
+                     </a>
+                     <ul class="dropdown-content list-unstyled">
+                      <li><a class="nav-link {% if request.path == '/bird-netting-services/' %} active {% endif %}" href="{% url 'bird-netting-services' %}">Bird Netting Services</a></li>
+                      <li><a class="nav-link {% if request.path == '/bird-spike-system/' %} active {% endif %}" href="{% url 'bird-spike-system' %}">Bird Spike System</a></li>
+                      <li><a class="nav-link {% if request.path == '/sport-net/' %} active {% endif %}" href="{% url 'sport-net' %}">Sport Net</a></li>
+                      <li><a class="nav-link {% if request.path == '/car-parking-net-system/' %} active {% endif %}" href="{% url 'car-parking-net-system' %}">Car Parking Net System</a></li>
+                      <li><a class="nav-link {% if request.path == '/swimming-pool-protect-net-system/' %} active {% endif %}" href="{% url 'swimming-pool-protect-net-system' %}">Swimming Pool Protect Net System</a></li>
+                      <li><a class="nav-link {% if request.path == '/safety-nets/' %} active {% endif %}" href="{% url 'safety-nets' %}">Safety Nets</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item" {% if request.path == '/' %} active {% endif %}><a href="{% url 'gallery' %}" class="nav-link {% if request.path == '/gallery/' %} active {% endif %}">Gallery</a></li>
+                 <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link {% if request.path == '/blog/' %} active {% endif %}">Blog</a></li>
+                 <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link {% if request.path == '/contact/' %} active {% endif %}">Contact</a></li>
+             </ul>
+         </div>
+     </div>
+         
+     
+     <div class="col-lg-1 col-md-3  d-flex p-3  contact-top order-md-2 order-lg-3 ">
+       <div>
+         <img src="{% static 'image/image.png' %}" class="contact-img" alt="">
+       </div>
+       <div class="nav-contact-text">
+         <span class="contact-need">Need Help?</span><br>
+           <a class="text-black" href="tel:+91-8076246674"><b>+91<b><b>-8076246674</b></a>
+         </span>
+       </div>
+     </div>
+     <div class="col-lg-1"></div>
+ </div>
+
+<!-- navbar end  -->
+
+<!-- carousel start  -->
+
+<div class="row mb-3 slider-row">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000"  >
+          
+            <div class="row slide-main p-5" >
+                <div class="col-lg-5 slide-left">
+                    <div class="slide-content">
+                    <div class="slide-content-innovation d-flex justify-content-between">
+                        <div class="slide-content-innovation-left"  data-aos="fade-up">
+                        <span class="text-white">Innovation At Work </span> <br>
+                        <img src="{% static 'image/hero-text-shape.png' %}"  alt="">
+                    </div>
+                    <div class="slide-content-innovation-right" data-aos="fade-up">
+                        <img src="{% static 'image/hero-shape-1.png' %}" alt="">
+                    </div>
+                    </div>
+                <div class="slide-roller"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+                    <span class="roller">Roller </span><br>
+                    <span class="sparrow" >
+                        Sparrow Net 
+                    </span>
+                </div>
+                <div class="slide-extra-text pt-4" data-aos="fade-up" data-aos-delay="900" data-aos-duration="2000">
+                    <p class="text-light">The Roller Sparrow Net offers a smart and humane solution to deter sparrows and other small birds from roosting and nesting 
+                        in urban environments. Designed with precision, this innovative netting system features strategically placed rollers that 
+                        rotate upon contact, preventing birds from finding a stable perch. Its durable construction and weather-resistant materials 
+                        ensure long-lasting effectiveness in various outdoor settings. </p>
+                </div>
+                <div class="buttons text-white d-flex mt-5" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
+                <div class="read-btn">
+                    <a href="{% url 'bird-netting-services' %}" class="text-white">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="play-btn ">
+                  <ul class="d-flex carousel-read-btn ">
+                    <li>
+                      <a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white ms-5">
+                        <i class=" fa-solid fa-play"></i> </a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white"><span class="ms-2">See how it work </span></a></li>
+                  </ul>  
+                </div>
+                </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                    <div class="slider-img" data-aos="fade-up" data-aos-duration="2000">                     
+                            <img src="{% static 'image/hero-man-bg.png' %}" class="layer1 layer11" alt="">                       
+                            <img src="{% static 'image/men1-removebg-preview.png' %}" class="layer2 layer12" alt="">
+                    </div>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000" >
+            <div class="row slide-main p-5">
+                <div class="col-lg-6 slide-left">
+                    <div class="slide-content">
+                    <div class="slide-content-innovation d-flex justify-content-between">
+                        <div class="slide-content-innovation-left" data-aos="fade-up">
+                        <span class="text-white">Innovation At Work </span> <br>
+                        <img src="{% static 'image/hero-text-shape.png' %}" alt="">
+                    </div>
+                    <div class="slide-content-innovation-right" data-aos="fade-up">
+                        <img src="{% static 'image/hero-shape-1.png' %}" alt="">
+                    </div>
+                    </div>
+                <div class="slide-roller" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+                    <span class="roller">Spike </span><br>
+
+                </div>
+                <div class="slide-extra-text pt-4" data-aos="fade-up" data-aos-delay="900" data-aos-duration="2000">
+                    <p class="text-light">Spike  is a cozy yet vibrant eatery nestled in the heart of downtown, known 
+                      for its fusion of bold flavors and laid-back ambiance. With a menu inspired by global cuisines and a focus on
+                       locally-sourced ingredients, Spike offers a diverse array of dishes that cater to every palate. From sizzling 
+                       steaks to zesty tacos and flavorful vegetarian options, there's something for everyone to enjoy. 
+                       The eclectic decor and welcoming atmosphere make it the perfect spot for a casual lunch with friends,
+                        a romantic dinner, or even just a quick bite on the go. .</p>
+                </div>
+                <div class="buttons text-white d-flex mt-5" data-aos="fade-up">
+                <div class="read-btn">
+                    <a href="{% url 'bird-netting-services' %}" class="text-white">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="play-btn">
+                  <ul class="d-flex">
+                    <li><a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white ms-5"><i class=" fa-solid fa-play"></i> </a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white"><span class="ms-2">See how it work </span></a></li>                   
+                </ul>
+              </div>
+                </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                    <div class="slider-img" data-aos="fade-up" data-aos-duration="2000">                     
+                     <!--- <img src="{% static 'image/hero-man-bg.png' %}" class="layer1 layer11" alt="">                       
+                      <img src="{% static 'image/men2.png' %}" class="layer2 layer12" alt="">-->
+                      <img src="{% static 'image/spike.png' %}" class="layer2 layer12" alt="">
+                    </div>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item " data-bs-interval="2000" >
+            <div class="row slide-main p-5">
+                <div class="col-lg-5 slide-left">
+                    <div class="slide-content">
+                    <div class="slide-content-innovation d-flex justify-content-between">
+                        <div class="slide-content-innovation-left" data-aos="fade-up">
+                        <span class="text-white">Innovation At Work </span> <br>
+                        <img src="{% static 'image/hero-text-shape.png' %}" alt="">
+                    </div>
+                    <div class="slide-content-innovation-right" data-aos="fade-up">
+                        <img src="{% static 'image/hero-shape-1.png' %}" alt="">
+                    </div>
+                    </div>
+                <div class="slide-roller" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+                   <!-- <span class="roller">Pleated </span><br>-->
+                    <span class="sparrow">
+                        Pigeon Net 
+                    </span>
+
+                </div>
+                <div class="slide-extra-text pt-4" data-aos="fade-up" data-aos-delay="900" data-aos-duration="2000">
+                    <p class="text-light">The Pleated Pigeon Net is a innovative solution designed to keep urban spaces clean and safe 
+                      from unwanted pigeon activity. Crafted from durable materials, this net features a unique pleated design 
+                      that allows for easy installation and removal, making it ideal for both temporary and permanent use. 
+                      Its discreet appearance seamlessly blends into any architectural setting, while its sturdy construction ensures
+                       reliable protection against pigeons and other nuisance birds. </p>
+                </div>
+                <div class="buttons text-white d-flex mt-5" data-aos="fade-up">
+                <div class="read-btn">
+                    <a href="{% url 'bird-netting-services' %}" class="text-white">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="play-btn">
+                  <ul class="d-flex">
+                    <li><a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white ms-5"><i class=" fa-solid fa-play"></i> </a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Hh3MjLaDNG8" class="text-white"><span class="ms-2">See how it work </span></a></li>
+                  </ul>   
+                </div>
+                </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                    <div class="slider-img" data-aos="fade-up" data-aos-duration="2000">                     
+                      <img src="{% static 'image/goal-shape.png' %}" class="layer1 layer31" alt="">                       
+                      <img src="{% static 'image/men3.png' %}" class="layer2 layer32 " alt="">
+                    </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+
+<!-- carousel end  -->
+<!-- about section start  -->
+
+<div class="row pt-5 mb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 p-5 d-flex">
+        <div class="about-left-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+          <img src="{% static 'image/g7.png' %}" alt="">
+          <img src="{% static 'image/g4.png' %}" class="mt-3" alt="">
+        </div>
+        <div class="about-right-img ms-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+          <img src="{% static 'image/g5.png' %}" alt="">
+        </div>
+      </div>
+     
+      <div class="col-lg-6 p-5 ">
+        <div class="about-experience mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000">
+          <span class="text-uppercase text-primary">Great Experience</span>
+        </div>
+        <div class="about-main-heading fs-1 mb-4" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+          <h1>About Us</h1> 
+        </div>
+        <div class="about-para mb-4" data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000">
+          <p>We are the suppliers or service provider of Bird Net System, Bird Spike System, Sport Net System, 
+            Swimming Pool Protect Net System, Car Parking Net System, Safety Net System Work in Delhi/ Jaunpur .
+             The Company has a long history in the industry and in latest years has re-organised and modernized
+              its manufacturing capacity to include the most recent methods and equipment across the entire range
+               of wire specifications. </p>
+        </div>
+        <div class="about-item ps-4 mb-5" data-aos="fade-up" data-aos-delay="900" data-aos-duration="2000">
+          <p>Our mission is to provide quality solutions, with deadly combination of affordable price and outstanding service.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="1100" data-aos-duration="2000" >
+          <a href="{% url 'about' %}" class="primary-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- about section end  -->
+
+<!-- our section start  -->
+<section class="our-section mb-3">
+<div class="row mb-5 pt-5 text-center">
+<div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+  <h4 class="service-subheading">BEST SOLUTIONS</h4>
+  <h2 class="service-heading">Our Services</h2>
+</div>
+ </div>
+<div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s1.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">BIRD NETTING SERVICES</h5>
+        <p class="card-text mb-5">Vashudev Bird Control is a one stop solution for Bird control. We are one of the leading names in Bird proofing and workers and excellent quality of Bird Net and Bird Spikes.</p>
+           <a href="{% url 'bird-netting-services' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s2.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">BIRD SPIKE SYSTEM</h5>
+        <p class="card-text mb-5">Birds off rooftops, parapet walls, light fixtures and other flat or curves surfaces. Anti corrosive and does not gather rust and dust and easy to clean. Bird Spike is a device consisting of long needle like rods. We provide the best services.</p>
+           <a href="{% url 'bird-spike-system' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s4.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">SPORT NET</h5>
+        <p class="card-text mb-5">We are one of the known company for providing cricket nets in hire for reasonable charges. Call for details. All units and equipped with all the essential tools.</p>
+           <a href="{% url 'sport-net' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s5.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">SWIMMING POOL PROTECT NET SYSTEM</h5>
+        <p class="card-text mb-5">Swimming pool nets are essential safety barriers that prevent children and pets from falling into your swimming pool. They’re easy to use, and relatively low-cost solution.</p>
+           <a href="{% url 'swimming-pool-protect-net-system' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s6.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">CAR PARKING NET SYSTEM</h5>
+        <p class="card-text mb-5">Car Parking Shade Net are anything but difficult to introduce, easy to understand, strong, dependable and give enduring administration which utilized for simple stopping of various autos inside.</p>
+           <a href="{% url 'car-parking-net-system' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>
+  <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="card card-section">
+      <img src="{% static 'image/s7.png' %}" class="card-img-top" alt="...">
+      <div class="card-body p-5">
+        <h5 class="card-title mb-3">SAFETY NETS</h5>
+        <p class="card-text mb-5">A safety net is a net protect from injury after from falling from height by limiting the distance they fall. The term also refers to devices for arresting falling or flying objects for the safety of people beyond or below the net.</p>
+           <a href="{% url 'safety-nets' %}" class="text-orange"> Read More <i class="fa-solid fa-arrow-right"></i> </a>
+      </div>
+    </div>
+  </div>  
+</div>
+</section>
+<!-- our section end  -->
+
+<!-- service section start  -->
+<section class="service-section">
+<div class="row mb-3 p-5 ">
+  <div class="col-lg-6">
+    <div class="">
+      <h4 class="service-subheading text-white fs-5 mb-4">VASHUDEV BIRD CONTROL</h4>
+      <h2 class="service-main-heading">Our Specialty</h2>
+      <p class="text-white">Vashudev Bird Control is the only brand to have a professional team of installers and technicians to support after-sales
+         service. Now ready to get the best quality with us.</p>
+    </div>
+    <div class="goal-item mb-4" data-aos="fade-up" data-aos-delay="1000">
+      <div class="goal-icon">
+        <img src="{% static 'image/wh1.png' %}" alt="">
+      </div>
+      <div class="goal-text" >
+        <h3 class="mb-3">Best Quality</h3>
+        <p>Our long existence in this field is due to the strict quality standards we follow. 
+          We focus on maintaining the quality standards up to our utmost level.</p>
+      </div>
+    </div>
+    <div class="goal-item mb-4" data-aos="fade-up" data-aos-delay="1000">
+      <div class="goal-icon">
+        <img src="{% static 'image/wh4.png' %}" alt="">
+      </div>
+      <div class="goal-text" >
+        <h3 class="mb-3">TAILORED SERVICES</h3>
+        <p>
+         Best Experience With highly experienced well trained industry professionals at work,
+          you can rest assured that the final outcome will exceed all your expectations</p>
+      </div>
+    </div>
+
+    <div class="goal-btn d-flex p-3">
+      <div class="goal-read mt-4">
+        <a href="{% url 'about' %}" class="special-btn">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      </div>
+      <div class="goal-whatsapp ms-5 d-flex" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+  <a href="https://wa.me/918076246674" class="goad-what-logo" style="color: green;">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <h1 class="ms-4 mt-3">
+    <a href="https://wa.me/918076246674" class="text-white" style="color: green;">
+      Whatsapp 
+    </a>
+  </h1>
+</div>
+
+    </div>
+  </div>
+  <div class="col-lg-6 goal-images" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <div class="goal-img">                     
+      <img src="{% static 'image/goal-shape.png' %}" class="goal1" alt="">                       
+      <img src="{% static 'image/21-1.png' %}" class="goal2" alt="">
+    </div>
+  </div>
+</div> 
+</section>
+<!-- service section end  -->
+
+<!-- gallery  section start   -->
+
+ 
+<div class="row mb-3 pt-5 text-center">
+  <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+    <h4 class="service-subheading">VASHUDEV BIRD CONTROL</h4>
+    <h2 class="service-heading">Our Gallery</h2>
+  </div>
+</div>
+<div class="row mt-5 gallery-section">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <div class="card-group" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+      <div class="card p-2" >
+        <img src="{% static 'image/s6.png' %}" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2">
+        <img src="{% static 'image/s7.png' %}" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2">
+        <img src="{% static 'image/s5.png' %}" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="card-group" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+      <div class="card p-2">
+        <img src="{% static 'image/s1.png' %}" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2">
+        <img src="{% static 'image/s4.png' %}" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2">
+        <img src="{% static 'image/s2.png' %}" class="card-img-top" alt="...">
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+
+<!-- gallery  section end   -->
+
+<!-- client feedback start  -->
+
+<section class="feedback bg-light mb-3">
+  <div class="row feedback-section pt-5 bg-grey ">
+    <div class="col-lg-6 p-5 road-images" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">   
+      <img src="{% static 'image/team-5.jpg' %}" class="feedback-men-images" alt="">
+    
+     </div>
+     <div class="col-lg-6 bg-white p-5 " data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+      <div class="feedback-heading-section">
+        <h4 class="text-primary">Clients Testimonial</h4>
+        <h2>Client's Feedback</h2>
+      </div>
+      <div class="feedback-carousel mt-5 p-2">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active pe-5">
+              <div class="feedback-client-title">
+                <h3 class="">Arun</h3>
+                <img src="{% static 'image/quote.png' %}" class="feedback-quote-image" alt="">
+              </div>
+               <div class="feedback-client-rating">
+                <ul class="d-flex">
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                </ul>
+                <p>Excellent service I'm happy with you. The businesspeople are very trained and experienced. </p>
+               </div>
+
+            </div>
+            <div class="carousel-item pe-5">
+            
+              <div class="feedback-client-title">
+                <h3 class="">Vishu</h3>
+                <img src="{% static 'image/quote.png' %}" class="feedback-quote-image" alt="">
+              </div>
+               <div class="feedback-client-rating">
+                <ul class="d-flex">
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                </ul>
+                <p> Quite good I'm happy with their service. The managers are very expert and trained. </p>
+               </div>
+            
+            </div>
+            <div class="carousel-item pe-5">
+              
+              <div class="feedback-client-title">
+                <h3 class="">Shivam</h3>
+                <img src="{% static 'image/quote.png' %}" class="feedback-quote-image" alt="">
+              </div>
+               <div class="feedback-client-rating">
+                <ul class="d-flex">
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
+                </ul>
+                <p>Their service is really great, quick order and fast installation. They handle query very well and very smooth functioning. Thank you very much. These blinds have made my house more beautiful.</p>
+               </div>
+
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+     </div>
+  </div>
+</section>
+
+<!-- client feedback end  -->
+
+<!-- client booking start  -->
+<section class="booking mb-3">
+<div class="row bg-dark booking-section">
+  <div class="col-lg-6 p-4">
+    <div class="booking-contact bg-white p-5">
+    <h4 class="booking-subheading text-primary">Book Now </h4>
+    <h2 class="booking-mainheading">
+      Restoring your peace of the mind
+    </h2>
+    <div class="booking-inputfield">
+      <!-- From Uiverse.io by Yaya12085 --> 
+    <form class="form" action="" method="POST">
+  {% csrf_token %}
+      <div class="flex justify-content-between">
+      <label>
+          <input required="" name="first_name" placeholder="" type="text" class="input">
+          <span>First name</span>
+      </label>
+
+      <label>
+          <input required="" name="last_name" placeholder="" type="text" class="input">
+          <span>Last name</span>
+      </label>
+  </div>  
+          
+  <label>
+      <input required="" name="email" placeholder="" type="email" class="input">
+      <span>Email</span>
+  </label> 
+      
+  <label>
+      <input required="" name="number" placeholder="" type="text" class="input">
+      <span>Number</span>
+  </label>
+  <label class="label-textarea">
+    <textarea required="" name="comment" placeholder=" " class="textarea"></textarea>
+    <span>Comment</span>
+</label>
+
+
+  <button class="submit">Submit</button>
+</form>
+    </div>
+  </div>
+</div>
+  <div class="col-lg-5 booking-image">
+    <img src="{% static 'image/Bird-Control-1-scaled-2.jpg' %}" alt="" class="">
+  </div>
+</div>  
+</section>
+
+<!-- client booking end  -->
+
+ <!-- client blog section start  -->
+ <section class="blog mb-3">
+   <div class="row mb-5 pt-5 text-center">
+  <div>
+    <h4 class="blog-subheading">
+      Mastering Bird Control Tactics</h4>
+    <h2 class="blog-heading">Our Blog</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <div class="container  blog-images">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
+        <div class="col" data-aos="fade-right" data-aos-delay="500">
+          <div class="card h-100">
+            <img src="{% static 'image/spike.png' %}" class="card-img-top" alt="...">
+             <div class="card-footer">
+              <small class="text-muted"> 
+                <ul class="d-flex justify-content-between">
+                 <li> <i class="fa-regular fa-user"></i> By vasudev </li>
+                 <li> <i class="fa-solid fa-comments"></i> No Comment </li>
+                </ul>
+              </small>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-primary blog-title">Keeping Pigeons at Bay: The Best</h3>
+              <p class="card-text">Pigeons are beautiful creatures to admire from afar, but when</p>
+        <a href="{% url 'Keeping-Pigeons' %}">
+          <button class="button">
+            Read More 
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </button>
+        </a>
+          </div>   
+          </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100">
+            <img src="{% static 'image/s1.png' %}" class="card-img-top" alt="...">
+             <div class="card-footer">
+              <small class="text-muted"> 
+                <ul class="d-flex justify-content-between">
+                 <li> <i class="fa-regular fa-user"></i> By vasudev </li>
+                 <li> <i class="fa-solid fa-comments"></i> No Comment </li>
+                </ul>
+              </small>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-primary blog-title"> Pigeon Net</h3>
+              <p class="card-text">Embark on a global exploration of logistics considerations for international</p>
+         <a href="{% url 'pleated-pigeon' %}">
+          <button class="button">
+            Read More 
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </button>
+         </a>
+          </div>   
+          </div>
+        </div>
+        <div class="col" data-aos="fade-left" data-aos-delay="500">
+          <div class="card h-100">
+            <img src="{% static 'image/sparrow.png' %}" class="card-img-top" alt="...">
+             <div class="card-footer">
+              <small class="text-muted"> 
+                <ul class="d-flex justify-content-between">
+                 <li> <i class="fa-regular fa-user"></i> By vasudev </li>
+                 <li> <i class="fa-solid fa-comments"></i> No Comment </li>
+                </ul>
+              </small>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-primary blog-title">Sparrow Net</h3>
+              <p class="card-text">Birds, with their grace and songs, are undoubtedly a charming</p>
+        <a href="{% url 'exploring-the-essential' %}">
+          <button class="button">
+            Read More 
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </button>
+        </a>
+          </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+ </section>
+
+ 
+ <!-- client blog section end  -->
+ <!-- client blog section end  -->
+
+<!-- footer section start  -->
+<section class="footer-section">
+  <div class="row footer pt-5 p-5">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2 col-md-6">
+      <div class="footer-logo">
+        <img src="{% static 'image/f-logo.png' %}" alt="">
+        <p>We are the suppliers or service providers of Bird Net System, Bird Spike System, Sport Net System, Swimming Pool Protect Net System, Car Parking Net System, and Safety Net System Work in Mumbai.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6 footer-quicklink mb-3">
+      <h3>Quick Link </h3>
+      <ul>
+        <li><a href="{% url 'about' %}" class="text-white">About Us</a></li>
+        <li><a href="{% url 'blog' %}" class="text-white">Blog</a></li>
+        <li><a href="{% url 'gallery' %}" class="text-white">Gallery</a></li>
+        <li><a href="{% url 'contact' %}" class="text-white">Contact </a></li>
+      </ul>
+    </div>
+
+    <!-- Force new row in md size -->
+    <div class="w-100 d-md-none"></div>
+
+    <div class="col-lg-2 col-md-6 footer-quicklink mb-3">
+      <h3>Services Link </h3>
+      <ul>
+        <li><a href="{% url 'safety-nets' %}" class="text-white">Safety Nets</a></li>
+        <li><a href="{% url 'car-parking-net-system' %}" class="text-white">Car Parking Net System</a></li>
+        <li><a href="{% url 'swimming-pool-protect-net-system' %}" class="text-white">Swimming Pool Protect Net System </a></li>
+        <li><a href="{% url 'sport-net' %}" class="text-white">Sport Net</a></li>
+        <li><a href="{% url 'bird-spike-system' %}" class="text-white">Bird Spike System </a></li>
+        <li><a href="{% url 'bird-netting-services' %}" class="text-white">Bird Netting Services </a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-4 col-md-6 footer-contactus mb-3 ">
+      <h3>Contact Us</h3>
+      <div class="d-flex footer-contact-number">
+        <i class="fa-solid fa-phone-volume"></i>
+        <a href="tel:+918076246674">+91-8076246674 | +91-9648226699 |<br> +91-9795744433</a>
+      </div>
+      <div class="d-flex footer-contact-number">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:vashudevbirdcontrol@gmail.com">vashudevbirdcontrol@gmail.com</a>
+      </div>
+      <div class="d-flex footer-contact-number">
+        <i class="fa-solid fa-location-arrow"></i>
+        <a href="">Main Office: T-197-C Savitri Nagar, Opposite Andolen Park, Near Chhabbra Battery Wali Gali, PO-Malviya Nagar, New Delhi-17</a>
+      </div>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+</section>
+
+<!-- footer section end  -->
+
+<!-- reserved section  -->
+<section class="reserveds">
+<div class="row p-3 bg-dark reserved">
+  <p class="text-white" >All Rights Reserved © Vashudev Bird Control | Designed By: 
+    <a href="" class="text-white">Saurabh Maurya & Shubham Singh</a>
+  </p>
+  
+</div>
+</section>
+</div>
+<!-- aos animation link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+  once: true
+});
+
+</script>
+
+    <!-- bootstrap link  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- javascript link  -->
+     <script src="{% static 'js/main.js' %}"></script>
+     <script src="{% static 'js/alerts.js' %}"></script>
+
+  </body>
+</html>

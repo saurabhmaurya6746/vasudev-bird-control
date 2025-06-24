@@ -1,0 +1,75 @@
+.bird-netting-row ul li a {
+    padding: 20px;
+    color:black;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.bird-netting-row ul li a:hover {
+    border: 1px solid black;
+    color:white;
+    background-color: #243169; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; 
+    margin: auto;
+}
+
+.background-image {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.overlay h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.overlay h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bird-contact-form a{
+    padding: 20px;
+    background-color: #243169;
+    color:white;
+}
+.bird-netting-img img{
+    width: 100%;
+}
+
+.bird-netting-heading h2{
+    font-size: 30px;
+    font-weight: 700;
+    color:#000405;
+}
+.bird-netting-heading p{
+    text-align: justify;
+}
