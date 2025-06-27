@@ -58,6 +58,7 @@
     .navbar-top{
        padding-left: 140px !important;
     }
+    
 
 }
 
@@ -114,9 +115,7 @@
      .goal2{
        height: 300px;
      }
-     .feedback-men-images {
-       padding-left: 20px;
-   }
+    
    /* about page  */
    .our-work-progress {
     margin-left: 25%;
@@ -144,6 +143,7 @@
    .feedback-men-images {
        height: 40vh;
        padding-left: 10px;
+       width: 400px;
    } 
    .slide-roller span{
     font-size: 50px;
@@ -200,7 +200,7 @@
     height: 150vh; 
   }
    .goal1{
-       height: 620px;
+       height: 600px;
    }
    .layer12{
     height: 110% !important;

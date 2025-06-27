@@ -4,6 +4,8 @@ from .forms import ContactForm
 from django.contrib import messages
 from .models import Contact  
 # Create your views here.
+from django.core.mail import send_mail
+from django.conf import settings
 from django.shortcuts import render, redirect
 from .models import InquiryForm  # Import the new model
 from django.contrib import messages  # For success messages
@@ -27,6 +29,15 @@ def index(request):
             number=number,
             comment=comment
         )
+        # Send Email Notification
+        send_mail(
+            "New Inquiry Form Submission",
+            f"First Name: {first_name}\nLast Name: {last_name}\nEmail: {email}\nNumber: {number}\nComment: {comment}",
+            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER],
+            fail_silently=False,
+        )
+
 
         messages.success(request, "Your inquiry has been submitted successfully!")
         return redirect("index")  # Redirect back to index.html
@@ -76,6 +87,14 @@ def contact(request):
 
         # Save data to database
         Contact.objects.create(name=name, email=email, phone=phone, comment=comment)
+        # Send Email Notification
+        send_mail(
+            "New Contact Form Submission",
+            f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}",
+            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER],
+            fail_silently=False,
+        )
 
         # Add a success message
         messages.success(request, "Your message has been sent successfully!")
