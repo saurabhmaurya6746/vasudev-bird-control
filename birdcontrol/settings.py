@@ -25,20 +25,7 @@ SECRET_KEY = 'django-insecure-byf!ir7)f3t3dy2#qfgif+)f8o$x$z_g80julgzx7n60d7va&i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [    'vasudev-bird-control.onrender.com',      
-    'vasudev-bird-control-1.onrender.com',     # In case of multiple Render projects
-    'vasudevbirdcontrol.com',                  # Custom domain (no www)
-    'www.vasudevbirdcontrol.com',              # Custom domain with www
-    'localhost',                               # For local dev testing
-    '127.0.0.1',                               # Localhost IP
-    '0.0.0.0',                                 # Often used in dev servers
-    '51.20.32.104',                            # Your public IPv4
-    '172.31.42.71',                            # Your private/local IP (AWS/VM, etc.)
-]
-                 
-
-
-
+ALLOWED_HOSTS = ['vasudev-bird-control.onrender.com', 'localhost', '127.0.0.1','https://vasudev-bird-control-3.onrender.com/','vasudev-bird-control-3.onrender.com']
 
 # Application definition
 
