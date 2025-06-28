@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'vasudev-bird-control-3.onrender.com',
     'localhost',
     '127.0.0.1',
+    'vasudevbirdcontrol.com',
     'vasudev-bird-control-2.onrender.com'
 ]
 
