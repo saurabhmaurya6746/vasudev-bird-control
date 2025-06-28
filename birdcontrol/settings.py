@@ -145,7 +145,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # email configuration 
-# settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://vasudev-bird-control-2.onrender.com',
+    'https://www.vasudevbirdcontrol.com',   
+]
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
