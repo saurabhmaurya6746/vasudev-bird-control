@@ -107,24 +107,37 @@ def contact(request):
 
     return render(request, "contact.html")
 
-
-
-
 def exploring(request):
     if request.method == "POST":
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
-        comment = request.POST.get("comment")
+        name = request.POST.get("name", "").strip()
+        email = request.POST.get("email", "").strip()
+        phone = request.POST.get("phone", "").strip()
+        comment = request.POST.get("comment", "").strip()
 
-        # Save data to database
-        Contact.objects.create(name=name, email=email, phone=phone, comment=comment)
-        # Add a success message
-        messages.success(request, "Your message has been sent successfully!")
+        if name and email and comment:
+            # Save to database
+            Contact.objects.create(name=name, email=email, phone=phone, comment=comment)
 
-        return redirect("exploring-the-essential")  # Redirect back to contact page
+            # Send Email
+            try:
+                send_mail(
+                    "New Exploring Form Submission",
+                    f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}",
+                    settings.EMAIL_HOST_USER,
+                    [settings.EMAIL_HOST_USER],  # You can add more emails here
+                    fail_silently=False,
+                )
+            except Exception as e:
+                messages.warning(request, f"Form saved, but email not sent: {e}")
+            else:
+                messages.success(request, "Your message has been sent successfully!")
+        else:
+            messages.error(request, "Please fill out all required fields.")
 
-    return render(request,'exploring-the-essential.html')
+        return redirect("exploring-the-essential")
+
+    return render(request, 'exploring-the-essential.html')
+
 
 def Keepingpigeons(request):
     return render(request,'Keeping-Pigeons.html')
