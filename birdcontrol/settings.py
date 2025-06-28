@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'vasudev-bird-control-3.onrender.com',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'vasudev-bird-control-2.onrender.com'
 ]
 
 # Application definition
