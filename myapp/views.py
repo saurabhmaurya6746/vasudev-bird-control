@@ -84,21 +84,13 @@ def contact(request):
         phone = request.POST.get("phone")
         comment = request.POST.get("comment")
 
-        # Save to DB
         Contact.objects.create(name=name, email=email, phone=phone, comment=comment)
 
-        # Safer email sending (alternative to send_mail)
         subject = "New Contact Form Submission"
-        body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}"
+        message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}"
 
         try:
-            email_msg = EmailMessage(
-                subject,
-                body,
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
-            )
-            email_msg.send(fail_silently=False)
+            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
             messages.success(request, "Your message has been sent successfully!")
         except Exception as e:
             messages.error(request, f"Email sending failed: {e}")
