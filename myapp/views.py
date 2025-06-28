@@ -9,6 +9,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from .models import InquiryForm  # Import the new model
 from django.contrib import messages  # For success messages
+from django.core.mail import EmailMessage
 
 # def index(request):
 #     return render(request, "index.html")  # Load index page
@@ -76,8 +77,6 @@ def swimmingpool(request):
 def safetynet(request):
     return render(request,'safety-nets.html')
 
-
-
 def contact(request):
     if request.method == "POST":
         name = request.POST.get("name")
@@ -85,23 +84,30 @@ def contact(request):
         phone = request.POST.get("phone")
         comment = request.POST.get("comment")
 
-        # Save data to database
+        # Save to DB
         Contact.objects.create(name=name, email=email, phone=phone, comment=comment)
-        # Send Email Notification
-        send_mail(
-            "New Contact Form Submission",
-            f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}",
-            settings.EMAIL_HOST_USER,
-            [settings.EMAIL_HOST_USER],
-            fail_silently=False,
-        )
 
-        # Add a success message
-        messages.success(request, "Your message has been sent successfully!")
+        # Safer email sending (alternative to send_mail)
+        subject = "New Contact Form Submission"
+        body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nComment: {comment}"
 
-        return redirect("contact")  # Redirect back to contact page
+        try:
+            email_msg = EmailMessage(
+                subject,
+                body,
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_HOST_USER],
+            )
+            email_msg.send(fail_silently=False)
+            messages.success(request, "Your message has been sent successfully!")
+        except Exception as e:
+            messages.error(request, f"Email sending failed: {e}")
 
-    return render(request, "contact.html")  # Load contact form page
+        return redirect("contact")
+
+    return render(request, "contact.html")
+
+
 
 
 def exploring(request):
