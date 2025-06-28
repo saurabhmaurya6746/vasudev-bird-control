@@ -157,5 +157,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465  # <- Change to SSL port
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True  # <- Enable SSL
-EMAIL_HOST_USER = 'vashudevbirdcontrol@gmail.com'
-EMAIL_HOST_PASSWORD = 'zaoe gxic nsqt lptl'
+EMAIL_HOST_USER = 'saurabhmauryajnp28@gmail.com'
+EMAIL_HOST_PASSWORD = 'caaw lcwr gwtz ocpb'
