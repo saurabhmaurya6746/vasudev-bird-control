@@ -152,5 +152,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False 
-EMAIL_HOST_USER = 'vashudevbirdcontrol@gmail.com'
-EMAIL_HOST_PASSWORD = 'zaoe gxic nsqt lptl'
+EMAIL_HOST_USER = 'saurabhmauryajnp28@gmail.com'
+EMAIL_HOST_PASSWORD = 'caaw lcwr gwtz ocpb'
