@@ -33,7 +33,9 @@ ALLOWED_HOSTS = [    'vasudev-bird-control.onrender.com',
     '127.0.0.1',                               # Localhost IP
     '0.0.0.0',                                 # Often used in dev servers
     '51.20.32.104',                            # Your public IPv4
-    '172.31.42.71',                            # Your private/local IP (AWS/VM, etc.)]
+    '172.31.42.71',                            # Your private/local IP (AWS/VM, etc.)
+]
+                 
 
 
 
