@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-byf!ir7)f3t3dy2#qfgif+)f8o$x$z_g80julgzx7n60d7va&i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'vasudev-bird-control-2.onrender.com',
