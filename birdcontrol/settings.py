@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     'vasudev-bird-control-rgpg.onrender.com',
     'vasudev-bird-control-6.onrender.com',
     'vasudev-bird-control-8z9e.onrender.com',
+    'vasudev-bird-control-1-enoa.onrender.com',
 ]
 
 
@@ -153,6 +154,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://vasudev-bird-control-2.onrender.com',
     'https://www.vasudevbirdcontrol.com', 
     'https://vasudev-bird-control-rgpg.onrender.com',
+    'https://vasudev-bird-control-1-enoa.onrender.com',
 ]
 
 
