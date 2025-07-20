@@ -151,7 +151,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://vasudev-bird-control-2.onrender.com',
-    'https://www.vasudevbirdcontrol.com',   
+    'https://www.vasudevbirdcontrol.com', 
+    'https://vasudev-bird-control-rgpg.onrender.com',
 ]
 
 
