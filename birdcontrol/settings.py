@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     'www.vasudevbirdcontrol.com',
     'vasudev-bird-control-6.onrender.com',
     'https://vasudev-bird-control-8z9e.onrender.com/',
+    'https://vasudev-bird-control-1-mcti.onrender.com/',
 ]
 
 
