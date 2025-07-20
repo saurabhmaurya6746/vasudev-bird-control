@@ -32,7 +32,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'vasudevbirdcontrol.com',
     'www.vasudevbirdcontrol.com',
-    'vasudev-bird-control-6.onrender.com'
+    'vasudev-bird-control-6.onrender.com',
+    'https://vasudev-bird-control-8z9e.onrender.com/',
 ]
 
 
