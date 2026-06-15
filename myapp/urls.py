@@ -28,6 +28,6 @@ urlpatterns = [
     path('bird-netting-services-prayagraj/',views.prayagraj,name='prayagraj'),
     path('bird-netting-services-lucknow/',views.lucknow,name='lucknow'),
     path('bird-netting-services-jaunpur/',views.jaunpur,name='jaunpur'),
-    path('bird-netting-services-varanasi/',views.varansi,name='varanasi'),
+    path('bird-netting-services-varanasi/',views.varanasi,name='varanasi'),
     path('tags/bird/', views.bird, name='bird'),  # bird-netting-services page
 ]
