@@ -24,5 +24,10 @@ urlpatterns = [
     path('designing-ethically-optimizing-videos-and-shining-the-spotlight-on-our-smashingconf-speakers/', views.Keepingpigeons, name='Keeping-Pigeons'),  # bird-netting-services page
     path('flowing-excellence-dripping-perfection-your-plumbers-of-choice/', views.pleatedpigeon, name='pleated-pigeon'),  # bird-netting-services page
     path('tags/spikes/', views.spikes, name='spikes'),  # bird-netting-services page
+     path('bird-netting-services-delhi/',views.delhi,name='delhi'),
+    path('bird-netting-services-prayagraj/',views.prayagraj,name='prayagraj'),
+    path('bird-netting-services-lucknow/',views.lucknow,name='lucknow'),
+    path('bird-netting-services-jaunpur/',views.jaunpur,name='jaunpur'),
+    path('bird-netting-services-varanasi/',views.varansi,name='varanasi'),
     path('tags/bird/', views.bird, name='bird'),  # bird-netting-services page
 ]
