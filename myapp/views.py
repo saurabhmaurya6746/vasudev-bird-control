@@ -54,7 +54,19 @@ def blog(request):
     
 # def contact(request):
 #     return render(request,'contact.html')
-    
+def delhi(request):
+    return render(request,'delhi.html')
+
+def prayagraj(request):
+    return render(request,'prayagraj.html')
+
+def lucknow(request):
+    return render(request,'lucknow.html')
+
+def jaunpur(request):
+    return render(request,'jaunpur.html')
+ def varanasi(request):
+    return render(request,'varanasi.html') 
 def gallery(request):
     return render(request,'gallery.html')
     
