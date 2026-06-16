@@ -34,5 +34,10 @@ urlpatterns = [
     path('bird-netting-services-jaunpur/',views.jaunpur,name='jaunpur'),
     path('bird-netting-services-varanasi/',views.varanasi,name='varanasi'),
     path('tags/bird/', views.bird, name='bird'),  # bird-netting-services page
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+     path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
 ]
