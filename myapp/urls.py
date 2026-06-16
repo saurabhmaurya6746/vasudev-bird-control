@@ -7,11 +7,7 @@
 # ]
 from django.urls import path
 from . import views
-from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap
-sitemaps = {
-    'static': StaticViewSitemap,
-}
+ 
 urlpatterns = [
     path('', views.index, name='index'),  # Home page
     path('about/', views.about, name='about'),  # About page
@@ -34,10 +30,4 @@ urlpatterns = [
     path('bird-netting-services-jaunpur/',views.jaunpur,name='jaunpur'),
     path('bird-netting-services-varanasi/',views.varanasi,name='varanasi'),
     path('tags/bird/', views.bird, name='bird'),  # bird-netting-services page
-     path(
-        "sitemap.xml",
-        sitemap,
-        {"sitemaps": sitemaps},
-        name="django.contrib.sitemaps.views.sitemap",
-    ),
 ]
