@@ -68,41 +68,74 @@
 </head>
   <body>
 
-    <div class="container-fluid">
-        <div class="row  p-2 bg-dark" id="email-section">
-          <div class="col-lg-1 col-md-1 col-sm-1"></div>
-          <div class="col-lg-4 col-md-5 col-sm-6 col-12 text-center">
-            <a class="text-light" href="mailto:vashudevbirdcontrol@gmail.com">
-              <!-- <i class="fa-sharp fa-solid fa-envelope"></i>  -->
-              vashudevbirdcontrol@gmail.com
+<!-- Header Start -->
+<div class="container-fluid">
+
+    <div class="row p-2 bg-dark align-items-center" id="email-section">
+
+        <!-- Email -->
+        <div class="col-lg-4 col-md-5 col-8 text-center text-lg-start">
+            <a class="text-light text-decoration-none" href="mailto:vashudevbirdcontrol@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                vashudevbirdcontrol@gmail.com
             </a>
-          </div>
-          <div class="col-lg-4 col-md-2 col-sm-1 "></div>
-          <div class="col-lg-2 col-md-3 col-sm-4 top-icons ">
-            <ul class="d-flex justify-content-between pt-2">
-              <li><a class="text-light" href="https://www.facebook.com/share/16ZmhDw9mJ/"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a class="text-light" href="https://www.instagram.com/vashudevbird?utm_source=qr&igsh=aXY3NG0xdDVsdjcy"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a class="text-light" href="https://wa.me/918076246674"><i class="fa-brands fa-whatsapp"></i></a></li>
-              <li><a class="text-light" href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-lg-1 col-md-1 vanish"></div>
         </div>
-        
-        <div class="container mt-3"> <!-- Ensures spacing below header -->
-          <div class="row">
-              <div class="col-12">
-                  {% if messages %}
-                      {% for message in messages %}
-                          <div class="alert alert-success alert-dismissible custom-alert" role="alert">
-                              <strong>Thank You!</strong> {{ message }} 
-                              <!-- <button type="button" class="btn-close ms-3" data-bs-dismiss="alert" aria-label="Close"></button> -->
-                          </div>
-                      {% endfor %}
-                  {% endif %}
-              </div>
-          </div>
-      </div>
+
+        <!-- SEO Text (Desktop Only) -->
+        <div class="col-lg-5 col-md-4 d-none d-md-block text-center">
+            <strong class="text-light">
+                Bird Netting & Anti Bird Spike Installation Services in Delhi,
+                Varanasi, Prayagraj, Lucknow and Jaunpur
+            </strong>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="col-lg-3 col-md-3 col-4">
+            <ul class="d-flex justify-content-end gap-3 m-0 p-0 list-unstyled">
+                <li>
+                    <a class="text-light" href="https://www.facebook.com/share/16ZmhDw9mJ/">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-light" href="https://www.instagram.com/vashudevbird">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-light" href="https://wa.me/918076246674">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-light" href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Success Message -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success alert-dismissible custom-alert" role="alert">
+                            <strong>Thank You!</strong> {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</div>
       <div class="row bg-white navbar" id="navbar-row">
         <!-- Navbar -->
         <nav class="navbar  navbar-expand-lg navbar-light bg-white px-3" >
