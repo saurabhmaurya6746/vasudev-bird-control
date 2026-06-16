@@ -28,7 +28,29 @@ ul{
 #email-section {    
   transition: all 0.3s ease-in-out;  
 }
+#email-section{
+    font-size:14px;
+}
 
+#email-section i{
+    font-size:16px;
+}
+
+.top-icons ul{
+    margin-bottom:0;
+}
+
+@media(max-width:768px){
+
+    #email-section{
+        padding:10px 5px !important;
+    }
+
+    #email-section a{
+        font-size:12px;
+    }
+
+}
 /* navbar  */
 
 .navbar ul li a {
