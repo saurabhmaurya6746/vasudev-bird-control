@@ -13,7 +13,15 @@ from django.core.mail import EmailMessage
 
 # def index(request):
 #     return render(request, "index.html")  # Load index page
+from django.http import HttpResponse
 
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Allow: /",
+        "Sitemap: https://vasudevbirdcontrol.com/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
 def index(request):
     if request.method == "POST":
         first_name = request.POST.get("first_name")
