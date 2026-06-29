@@ -19,12 +19,76 @@
   <title>Best Bird Netting & Anti-Bird Spikes - Vasudev (Vashudev) Bird Control</title>
   <link rel="shortcut icon" href="{% static 'image/favicon.jpg' %}" type="image/x-icon">
 
-  <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Vasudev Bird Control (also known as Vashudev Bird Control) offers expert bird netting, anti-bird spike installation, and pigeon control solutions across India.">
-  <meta name="keywords" content="vasudev bird control, vashudev bird control, bird netting, anti-bird spikes, pigeon control, balcony netting, bird proofing, vasudevbirdcontrol, vashudevbirdcontrol">
-  <meta name="author" content="Vasudev Bird Control">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHFJ82N0G5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YHFJ82N0G5'); </script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+  {% if request.resolver_match.url_name == 'delhi' %}Best Bird Netting Services & Anti-Bird Spikes in Delhi
+  {% elif request.resolver_match.url_name == 'varanasi' %}Best Bird Netting & Pigeon Net Installation in Varanasi
+  {% elif request.resolver_match.url_name == 'lucknow' %}Top Bird Netting Services & Bird Spikes in Lucknow
+  {% elif request.resolver_match.url_name == 'prayagraj' %}Professional Bird Netting & Pigeon Control in Prayagraj
+  {% elif request.resolver_match.url_name == 'jaunpur' %}Best Bird Netting Services in Jaunpur | Bird Proofing
+  {% else %}Best Bird Netting & Anti-Bird Spikes | Vasudev Bird Control{% endif %}
+</title>
+
+<link rel="shortcut icon" href="{% static 'image/favicon.jpg' %}" type="image/x-icon">
+
+<meta name="description" content="{% if request.resolver_match.url_name == 'delhi' %}Vasudev Bird Control offers professional bird netting, balcony pigeon nets, and anti-bird spikes installation services in Delhi NCR at affordable prices.{% elif request.resolver_match.url_name == 'varanasi' %}Get expert bird netting and pigeon control solutions in Varanasi. High-quality nylon nets and stainless steel spikes installation for balconies and offices.{% elif request.resolver_match.url_name == 'lucknow' %}Looking for reliable bird netting in Lucknow? Vasudev Bird Control provides durable pigeon safety nets and anti-bird spikes with warranty.{% elif request.resolver_match.url_name == 'prayagraj' %}Best pigeon net installation and bird proofing services in Prayagraj. Protect your balconies and industrial areas from pigeons safely.{% elif request.resolver_match.url_name == 'jaunpur' %}Professional bird netting and safety net installation services in Jaunpur. Call Vasudev Bird Control for a free site visit today!{% else %}Vasudev Bird Control offers expert bird netting, anti-bird spike installation, and pigeon control solutions across Delhi, Noida, Varanasi, Lucknow, and Prayagraj.{% endif %}">
+
+<meta name="keywords" content="bird netting delhi, bird netting varanasi, bird netting lucknow, bird netting prayagraj, bird netting jaunpur, vasudev bird control, vashudev bird control, pigeon net installation, anti bird spikes, balcony safety nets">
+<meta name="author" content="Vasudev Bird Control">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+<meta property="og:title" content="Vasudev (Vashudev) Bird Control | Pigeon & Bird Netting Services">
+<meta property="og:description" content="Trusted Bird Netting & Pigeon Control Service in Delhi, Varanasi, Lucknow, Prayagraj, and Jaunpur. Book a free site visit today!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:image" content="{% static 'image/og-image.jpg' %}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vasudev (Vashudev) Bird Control">
+<meta name="twitter:description" content="Expert bird proofing and anti-pigeon net installation service.">
+<meta name="twitter:image" content="{% static 'image/og-image.jpg' %}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vasudev Bird Control",
+  "alternateName": "Vashudev Bird Control",
+  "image": "https://vasudevbirdcontrol.com/static/image/og-image.jpg",
+  "@id": "https://vasudevbirdcontrol.com",
+  "url": "https://vasudevbirdcontrol.com",
+  "telephone": "+91XXXXXXXXXX", 
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "197 RPS Flats, Sekh Sarai Road",
+    "addressLocality": "{% if request.resolver_match.url_name == 'varanasi' %}Varanasi{% elif request.resolver_match.url_name == 'lucknow' %}Lucknow{% elif request.resolver_match.url_name == 'prayagraj' %}Prayagraj{% elif request.resolver_match.url_name == 'jaunpur' %}Jaunpur{% else %}New Delhi{% endif %}",
+    "addressRegion": "{% if request.resolver_match.url_name == 'delhi' %}Delhi{% else %}Uttar Pradesh{% endif %}",
+    "postalCode": "{% if request.resolver_match.url_name == 'delhi' %}110017{% else %}221001{% endif %}",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "19:00"
+  }
+}
+</script>
 
   <!-- ✅ Canonical Link -->
   <link rel="canonical" href="https://vasudevbirdcontrol.com/" />
