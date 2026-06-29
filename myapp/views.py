@@ -71,7 +71,7 @@ def prayagraj(request):
 def lucknow(request):
     return render(request,'lucknow.html')
 def varanasi(request):
-    return render(request,'varanasi.html')
+    return render(request,'Varanasi.html')
 def jaunpur(request):
     return render(request,'jaunpur.html')
 def gallery(request):
